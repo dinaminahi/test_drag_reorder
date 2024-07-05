@@ -19,3 +19,23 @@
   object-fit: cover;
   cursor: grab;
 }
+
+.dots {
+  display: none;
+}
+
+.sortPhoto {
+  display: flex;
+  gap: 5px;
+
+  &:active {
+    .dots {
+      display: block;
+    }
+  }
+  &:hover {
+    .dots {
+      display: block;
+    }
+  }
+}

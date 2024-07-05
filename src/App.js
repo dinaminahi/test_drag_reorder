@@ -66,9 +66,10 @@ function App() {
         ))}
       </ReactSortable>
 
-      <ReactSortable delayOnTouchOnly list={oneColumnList} setList={setOneColumnList}>
+      <ReactSortable delayOnTouchOnly list={oneColumnList} setList={setOneColumnList} delay={300} scrollSensitivity={100} handle=".dots">
         {oneColumnList.map((item) => (
-          <div key={item.id}>
+          <div key={item.id} className="sortPhoto">
+            <span className="dots">...</span>
             <img src={item.imageUrl} className="image" width="100" height="100" alt={item.name} />
           </div>
         ))}
